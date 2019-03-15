@@ -56,6 +56,8 @@ void loop() {
 void checkValue(float val1, float val2, String sensor){
   if(isnan(val1) || isnan(val2)) {
     Serial.println("Sensor " + sensor + " is not working");
-    lcd.write("Error sensor " + sensor)
+    lcd.clear()
+    lcd.cursor(0, 1)
+    lcd.print("Error sensor " + sensor)
   }
 }
